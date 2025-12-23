@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.blastrock.ardocs"
+        minSdkVersion 28
+        targetSdkVersion 29
+        versionCode 9
+        versionName "1.0.9"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            buildConfigField "String", "DOC_API_IP_ADDRESS", "\"<DOC_API_IP_ADDRESS>\""
+            resValue "integer", "MAXIMUM_DOCUMENTS", "8"
+            resValue  "string", "APP_MODE", "development"
+            resValue  "string", "ADMOB_APP_ID", "<ADMOB_APP_ID>"
+            resValue  "string", "ADMOB_ID_BANNER", "<ADMOB_ID_BANNER>"
+            resValue  "string", "ADMOB_ID_VIDEO", "<ADMOB_ID_VIDEO>"
+        }
+        release {
+            buildConfigField "String", "DOC_API_IP_ADDRESS", "\"<DOC_API_IP_ADDRESS>\""
+            resValue "integer", "MAXIMUM_DOCUMENTS", "8"
+            resValue  "string", "APP_MODE", "production"
+            resValue  "string", "ADMOB_APP_ID", "<ADMOB_APP_ID>"
+            resValue  "string", "ADMOB_ID_BANNER", "<ADMOB_ID_BANNER>"
+            resValue  "string", "ADMOB_ID_VIDEO", "<ADMOB_ID_VIDEO>"
+
+            debuggable false
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            renderscriptOptimLevel = 3
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+    }
+    buildToolsVersion '28.0.3'
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+}
+
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.ar.sceneform.plugin'
+
+dependencies {
+    // Android
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.media:media:1.2.1'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.google.firebase:firebase-messaging:21.0.1'
+    implementation 'com.google.firebase:firebase-ads:19.7.0'
+    androidTestImplementation 'androidx.test:runner:1.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    testImplementation 'junit:junit:4.12'
+    // Google
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.android.billingclient:billing:3.0.2'
+    // Firebase
+    implementation 'com.google.firebase:firebase-auth:20.0.2'
+    implementation 'com.google.firebase:firebase-database:19.6.0'
+    implementation 'com.google.firebase:firebase-analytics:18.0.2'
+    // ARCore
+    implementation 'com.google.ar.sceneform:core:1.17.1'
+    implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.17.1'
+    implementation 'com.google.ar.sceneform:assets:1.17.1'
+    implementation 'org.apache.commons:commons-io:1.3.2'
+    // OkHttp
+    implementation 'com.squareup.okhttp3:okhttp:3.14.0'
+}

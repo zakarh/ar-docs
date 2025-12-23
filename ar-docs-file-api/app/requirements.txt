@@ -1,0 +1,6 @@
+Flask
+gunicorn
+Pillow
+numpy
+firebase_admin
+pyOpenSSL

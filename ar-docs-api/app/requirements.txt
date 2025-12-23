@@ -1,0 +1,6 @@
+flask
+jinja2
+requests
+requests_toolbelt
+google-api-python-client
+oauth2client

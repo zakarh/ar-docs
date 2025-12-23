@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AR Docs</string>
+    <string name="splash_title">AR\nDocs</string>
+    <string name="policy_agreement">I agree to the Terms of Service and Privacy Policy.</string>
+    <string name="open_menu">Open Menu.</string>
+    <string name="ready_prompt">Document Ready</string>
+    <string name="processing_prompt">Processing Document</string>
+    <string name="close_document">Close document.</string>
+    <string name="sign_in_statement"><![CDATA[By tapping Sign In, you agree to our <a href=\'https://www.blastrock.com/terms\'>Terms of Service</a> and have read and acknowledged our <a href=\'https://www.blastrock.com/privacy\'>Privacy Statement</a>.]]></string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/signOut"
+        android:title="Sign Out" />
+    <item
+        android:id="@+id/resetSession"
+        android:title="Reset Session" />
+    <item
+        android:id="@+id/eraseData"
+        android:title="Erase My Data" />
+    <item
+        android:id="@+id/disableAds"
+        android:title="Disable Ads 1 Hour" />
+    <item
+        android:id="@+id/premium"
+        android:title="Upgrade to Premium" />
+</menu>
